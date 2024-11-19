@@ -140,33 +140,64 @@ class Hello{
 }
 
 // arithmetic operations
+// addition(+), subtraction(-), multiplication(*), division(/), modular(%)
+
+class Hello{
+    public static void main(String a[]){
+        int num1 = 1;
+        int num2 = 2;
+        int add = num1 + num2;          // addition
+        int sub = num1 - num2;          // subtraction
+        int mul = num1 * num2;          // multiplication
+        int div = num1 / num2;          // division
+        int mod = num1 % num2;          // modular - gives the remainder
+        System.out.println(add);        // 3
+        System.out.println(sub);        // -1
+        System.out.println(mul);        // 2
+        System.out.println(div);        // 0
+        System.out.println(mod);        // 1
+    }
+}
+
+// increment, decrement, post and pre increment, post and pre decrement
+
+class Hello{
+    public static void main(String a[]){
+        int num = 5;       // when we do arithmetic operations on the same number
+        num += 1;          // 6
+        num -= 1;          // 5
+        num *= 1;          // 5
+        num /= 1;          // 5
+        num++;             // 6; post-increment 
+        ++num;             // 6; pre-increment
+        int res = num++; // res = 5; first, it fetches the value and then increments it.
+        int res = ++num; // res = 6; it increments the value and fetches the value.
+         
+    }
+}
 
 // relational operations 
+// less than(<), greater then(>), equal to(==), not equal to(!=), less then equal to(<=), greater than equal to(>=)
+// The output we receive from relational operations is a Boolean value.
+
 
 // logical operations
+// AND(&/&&), OR(|/||), NOT(!), XOR(XOR)
 
+//AND - we can use the & or && symbol; it is T only if both the conditions are T. If any one of them is F it is F
+// T && T = T
+// T && F = F
+// F && T = F
+// F && F = F
 
+// OR -  we can use the | or || symbol; it is T if any one of them is T, and if both are F, then we get F
+// T || T = T
+// T || F = T
+// F || T = T
+// F || F = F
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// XOR - XOR; if both the values are same then F, if both the values are different then T.
+// T XOR T = F
+// T XOR F = T
+// F XOR T = T
+// F XOR F = F
