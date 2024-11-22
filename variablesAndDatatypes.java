@@ -25,6 +25,7 @@ class Hello{
 // There are two types: primitive and non-primitive
 
 // primitive datatype - They are basic, simple to use and in-built data types (integer, float, character, boolean)
+// primitive datatype - Mainly, there are four types - int, float, char, boolean
 
 // integer
 // types of integer -  byte, short, int, long
