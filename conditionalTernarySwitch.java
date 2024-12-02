@@ -16,7 +16,7 @@ class Hello{
 }
 
 // ternary operator 
-//It is generally used when for one-line code
+// It is generally used when for one-line code
 // condition ? what happens when the condition is true: what happens when the condition is false
 // condition ? True : False
 
