@@ -160,7 +160,7 @@ class Main
 // class loads
 // object gets initialized
 
-// static keyword -  it is called when we create a class
+// static block -  it is called when we create a class
 
 // constructor - it is called at the time of object creation
 // name of the constructor should be the same as the name of the class
@@ -173,7 +173,7 @@ class Mobile
     int cost;
     static String name;
 
-    static                    // static keyword
+    static                    // static block
     {
         name = "smartphone";
         System.out.println("I am in static method");
@@ -211,7 +211,128 @@ class Main
    }
 }
 
-// static block
+// If you don't create the object, it will not load the class as well 
+// but what if we want to load the class 
+
+//In Java, we have Class.forName("nameOfYourClass") to load the class; when we use Class, we need to define the expectation
+
+class Mobile
+{
+    String brand;
+    int cost;
+    static String name;
+
+    static
+    {
+        name = "smartphone";
+        System.out.println("I am in static method");
+    }
+
+    public Mobile()
+    {
+        brand = "";
+        cost = 200;
+        System.out.println("I am in constructor");
+    }
+    public void show()
+    {
+        System.out.println(brand + " " + cost + " " + name);
+    }
+}
+
+class Main
+{
+   public static void main(String a[]) throws ClassNotFoundException
+   {
+       Class.forName("Mobile");
+   }
+
+    private static class classNotFoundException extends Exception {
+    }
+}
+
+// Encapsulation
+// Definition: where we bind both the member variables and member functions together is called encapsulation
+
+// private variables can be accessed by their own class or its methods
+
+class Details
+{
+    private String name = "Anu";        // private variables
+    private int age = 26;
+
+    public String getName()            // getter methods
+    {
+        return name;
+    }
+    public int getAge()                // getter methods
+    {
+        return age;
+    }
+    public void setName(String s)
+    {
+        name = s;
+    }
+    public void setAge(int a)
+    {
+        age = a;
+    }
+}
+
+class Main
+{
+    public static void main(String a[])
+    {
+        Details person = new Details();
+        person.setName("chinnu");            // to set a value
+        person.setAge(26);
+        
+        System.out.println(person.getName());
+        System.out.println(person.getAge());
+    }
+}
+
+// this keyword
+//This keyword is generally used to refer to the current object
+
+class Details
+{
+    private String name = "Anu";        // private variables
+    private int age = 26;
+
+    public String getName()            // getter methods
+    {
+        return name;
+    }
+    public int getAge()                // getter methods
+    {
+        return age;
+    }
+    public void setName(String name)  // here name is local variable 
+    {
+        this.name = name;             // this keyword 
+    }                                 // when we
+    public void setName(String name)  // error from line 315 - 318
+    {
+        name = name;                  // when we define name = name;   
+    }
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+}
+class Main
+{
+    public static void main(String a[])
+    {
+        Details person = new Details();
+        person.setName("chinnu");
+        person.setAge(26);
+
+        System.out.println(person.getName());
+        System.out.println(person.getAge());
+    }
+}
 
 
 
