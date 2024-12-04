@@ -47,9 +47,9 @@ class Main{
     }
 }
 
-// Method overloading - functions having the same name but different number of variables and different datatypes.
+// Method overloading - functions having the same name but different numbers of variables and other datatypes.
 
-class Calulator
+class Calculator
 {
     public int add(int num1, int num2)
     {
@@ -69,9 +69,8 @@ class Main
 {
     public static void main(String a[])
     {
-        Calulator obj = new Calulator();
+        Calculator obj = new Calulator();
         int result = obj.add(6,1,5);
         System.out.println(result);
-
     }
 }
