@@ -63,39 +63,5 @@ class Method {
     }
 }
 
-// static methods/variables are accessed by class, where as instance methods/variables are accessed by objects(created by class)
-
-class Mobile
-{
-    String brand;
-    int cost;
-    static String name;
-
-    public void show()
-    {
-        System.out.println(brand + " " + cost + " " + name);
-    }
-}
-
-class Main
-{
-   public static void main(String a[])
-   {
-       Mobile obj = new Mobile();
-       obj.brand = "Apple";
-       obj.cost = 1000;
-       Mobile.name = "smartphone";
-
-       Mobile obj2 = new Mobile();
-       obj2.brand = "Google";
-       obj2.cost = 900;
-       
-       System.out.println("First Product");
-       obj.show();
-       System.out.println("Second Product");
-       obj2.show();
-   }
-}
-
 
 
