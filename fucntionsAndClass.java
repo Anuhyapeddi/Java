@@ -334,6 +334,39 @@ class Main
     }
 }
 
+// default and parameterized constructor 
+
+class Order
+{
+    String flavour;
+    int cost;
+
+    public Order()                               // default constructor
+    {
+        flavour = "cotton candy";
+        cost = 15;
+    }
+    public Order(String flavour, int cost)       // parameterized constructor
+    {
+        this.flavour = flavour;
+        this.cost = cost;
+    }
+}
+
+class Main
+{
+    public static void main(String a[])
+    {
+        Order order1 = new Order();            
+        Order order2 = new Order("black grape", 20);
+
+        System.out.println("welcome to lolas yogourt");
+        System.out.println(order1.flavour + " - " + order1.cost);
+        System.out.println(order2.flavour + " - " + order2.cost);
+    }
+}
+
+// Inheritance
 
 
 
