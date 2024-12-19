@@ -128,7 +128,7 @@ class Mobile
 
     public static void show1(Mobile obj)            // static method
     {
-        System.out.println(obj.brand + " " + obj.cost + " " + name);
+        System.out.println(obj.brand + " " + obj.cost + " " + name);  // cannot access instance variables directly in static methods
     }
 }
 
